@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N Puzzle in JavaScript</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/solver.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body onload="resetBoard()">
+    <div class="container">
+        <h1 class="text-center">N-Puzzle in JavaScript</h1>
+        <hr>
+        <table cellspacing="2" align="center" id="gameTable"></table>
+    </div>
+
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <h5>Total Moves: <span id="moves">0</span></h5>
+        </div>
+    </div>
+
+
+    <div class="container" style="text-align: center;">
+        <h5>Resize board:</h5>
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="rows">Rows: </label>
+                <input type="text" class="form-control" name="rows" id="rows" value="4" style="text-align: center;" />
+            </div>
+            <div class="form-group">
+                <label for="rows">by Columns: </label>
+                <input type="text" class="form-control" name="cols" id="cols" value="4" style="text-align: center;" />
+            </div>
+            <button class="btn btn-success" value="New Game" onclick="resetBoard()">Submit</button>
+        </form>
+    </div>
+
+    <div class="container" style="text-align: center; margin-top: 16px;">
+        <div class="btn-group">
+            <input class="btn btn-primary" type="button" value="Parity" onclick="solvability()">
+            <input class="btn btn-primary" type="button" value="Manhattan Distance" onclick="manhattanPriority()">
+            <input class="btn btn-primary" type="button" value="Solve" onclick="Nsolver()" />
+            <input class="btn btn-primary" type="button" value="Play" onclick="if(!checkBoard()){setInterval(playSolution, 250);}" />
+        </div>
+    </div>
+
+    <br/>
+    <div class="container">
+        <div class="row">
+            <form class="col-sm-12">
+                <label for="solveMoves">List of Moves:</label>
+                    <textarea id="solveMoves" class="form-control" disabled cols="20" rows="10"></textarea>
+            </form>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

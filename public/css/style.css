@@ -1,0 +1,40 @@
+.tile {
+    padding: 6px 6px;
+    border: 1px solid #2c3e50;
+    box-shadow: 2px 2px 2px #888888;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #2c3e50;
+    cursor: pointer;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+}
+
+#parity {
+    margin-top: 10px;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.blue {
+    background-color: #008CBA;
+}
+
+.gray {
+    background-color: #e7e7e7;
+    color: #000000;
+}
+
+.red {
+    background-color: #f44336;
+}
+
+.illegal {
+    background-color: #ff3300;
+    color: #ffffff;
+}

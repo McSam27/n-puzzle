@@ -1,0 +1,16 @@
+{
+    "name": "n-puzzle",
+    "version": "1.0.0",
+    "description": "N - Puzzle",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.15.3",
+        "nodemon": "^1.11.0"
+    }
+}
